@@ -9,8 +9,7 @@
 	},
 	"scripts": {
 		"start": "node app.js",
-		"test": "NODE_ENV='test' mocha",
-		"test-jenkins": "JUNIT_REPORT_PATH=/report.xml mocha --colors --reporter mocha-jenkins-reporter"
+		"test": "./node_modules/.bin/mocha --recursive -R xunit test/ > test-reports.xml"
 	},
 	"devDependencies": {
 		"mocha": "1.20.1",
