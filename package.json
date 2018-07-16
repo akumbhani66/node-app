@@ -9,9 +9,16 @@
 	},
 	"scripts": {
 		"start": "node app.js",
-		"test": "./node_modules/.bin/mocha --recursive -R xunit test/ > test-reports.xml"
+		"test": "./node_modules/.bin/mocha --recursive -R xunit test/ > test-reports.xml",
+		"lint": "eslint **/*.js -c config.eslintrc -f checkstyle"
 	},
 	"devDependencies": {
+		"eslint": "^5.1.0",
+		"eslint-config-standard": "^11.0.0",
+		"eslint-plugin-import": "^2.13.0",
+		"eslint-plugin-node": "^6.0.1",
+		"eslint-plugin-promise": "^3.8.0",
+		"eslint-plugin-standard": "^3.1.0",
 		"mocha": "1.20.1",
 		"supertest": "0.13.0"
 	}
